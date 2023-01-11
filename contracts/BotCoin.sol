@@ -10,3 +10,9 @@ contract BotCoin is ERC20 {
         _mint(msg.sender, _initial_supply);
     }
 }
+
+interface IBucket {
+    event Winner(address);
+
+    function drop(address erc20, uint amount) external;
+}
